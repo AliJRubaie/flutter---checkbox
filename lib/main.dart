@@ -22,6 +22,7 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
   bool country = false;
+  bool country2 = false;
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -55,6 +56,26 @@ class _HomeState extends State<Home> {
                   ),
                 ],
               ),
+              CheckboxListTile(
+                secondary: Image(
+                  image: NetworkImage(
+                      "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Flag_of_Jordan.svg/2560px-Flag_of_Jordan.svg.png"),
+                ),
+                title: Text(
+                  "Jordan",
+                  style: TextStyle(fontSize: 25),
+                ),
+                subtitle: Text(
+                  "Amman",
+                  style: TextStyle(fontSize: 20),
+                ),
+                value: country2,
+                onChanged: (val) {
+                  setState(() {
+                    country2 = val!;
+                  });
+                },
+              )
             ],
           ),
         ),
